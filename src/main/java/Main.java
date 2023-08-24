@@ -22,17 +22,17 @@ public class Main {
         threadAdd.join();
 
         Thread threadChar_A = new Thread(() -> {
-            System.out.println("\n\nСтрока с максимальным количеством символов - a: " + MaxCharStringQueue(queue1,
+            System.out.println("\n\nСтрока с максимальным количеством символов - a: " + maxCharStringQueue(queue1,
                     'a'));
         });
 
         Thread threadChar_B = new Thread(() -> {
-            System.out.println("\n\nСтрока с максимальным количеством символов - b: " + MaxCharStringQueue(queue2,
+            System.out.println("\n\nСтрока с максимальным количеством символов - b: " + maxCharStringQueue(queue2,
                     'b'));
         });
 
         Thread threadChar_C = new Thread(() -> {
-            System.out.println("\n\nСтрока с максимальным количеством символов - c: " + MaxCharStringQueue(queue3,
+            System.out.println("\n\nСтрока с максимальным количеством символов - c: " + maxCharStringQueue(queue3,
                     'c'));
         });
 
@@ -54,7 +54,7 @@ public class Main {
         return text.toString();
     }
 
-    public static String MaxCharStringQueue(BlockingQueue<String> queue, char targetChar) {
+    public static String maxCharStringQueue(BlockingQueue<String> queue, char targetChar) {
 
         String maxCharString = "";
         int maxCharCount = 0;
